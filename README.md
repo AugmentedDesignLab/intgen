@@ -8,7 +8,22 @@ The workflow to obtain a road intersection as a SUMO road network file and on th
 
 The intersection generator is run by running the python script test02.py.py with parameters as shown in the description below - 
 ```
+usage: test02.py.py [-h] [-in INCOMING_ROADS] [-spx SPAWN_POINTX]
+                    [-spy SPAWN_POINTY] [-l LENGTH] [-o OUTPUT_FILE]
+                    [-multi MULTILANED [MULTILANED ...]]
 
+Process intersection generation parameters
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -in INCOMING_ROADS,   --incoming_roads INCOMING_ROADS     input number of incoming roads
+  -spx SPAWN_POINTX,    --spawn_pointx SPAWN_POINTX         intersection spawn point x coordinate
+  -spy SPAWN_POINTY,    --spawn_pointy SPAWN_POINTY         intersection spawn point y coordinate
+  -l LENGTH,            --length LENGTH                     standard incoming road length
+  -o OUTPUT_FILE,       --output_file OUTPUT_FILE           output file name
+  -multi MULTILANED [MULTILANED ...], --multilaned MULTILANED [MULTILANED ...]
+                                                            multilaned (4-6 lanes) roads (1,2,...) specification -
+                                                            example : road2laned4, road4laned6, etc.
 ```
 
 As shown in the figure above, the intersection generator creates a text file. The text file looks like - 
