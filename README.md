@@ -1,12 +1,12 @@
 # IntGen
 
-IntGen is a road intersection generator, the results of which can be realised on Unreal Engine using [SUMO2Unreal](https://github.com/AugmentedDesignLab/Sumo2Unreal) as well as  the [Netgenerate](https://sumo.dlr.de/userdoc/NETGENERATE.html) application from the [SUMO](https://sumo.dlr.de/userdoc/Sumo_at_a_Glance.html) traffic simulator.
+IntGen is a road intersection generator, the results of which can be realised on the [SUMO](https://sumo.dlr.de/userdoc/Sumo_at_a_Glance.html) traffic simulator as well as the Unreal Engine using [SUMO2Unreal](https://github.com/AugmentedDesignLab/Sumo2Unreal).
 
 ## Workflow
 
 The workflow to obtain a road intersection as a SUMO road network file and on the Unreal Engine is shown in the figure below. ![workflow](https://github.com/ishaan95/intgen/blob/master/workflow_diagram.png "Workflow")
 
-The intersection generator is run by running the python script test02.py.py with parameters as shown in the description below - 
+We run the intersection generator by running the python script test02.py.py with parameters as shown in the description below - 
 ```
 usage: test02.py.py [-h] [-in INCOMING_ROADS] [-spx SPAWN_POINTX]
                     [-spy SPAWN_POINTY] [-l LENGTH] [-o OUTPUT_FILE]
@@ -35,9 +35,9 @@ As shown in the figure above, the intersection generator creates a text file (ou
 (0, 0),(-1.83697019872e-15, -10.0),[],laned6
 ```
 
-The lines describe the start and end points of edges (incoming roads for an intersection). The intersection by default is spawned at (0,0). The square brackets describe the shape coordinates if needed. The last entry (laned4) describes the number of lanes for that particular edge. By default each edge is two laned but can be 4 or 6 lanes also.  
+The lines describe the start and end points of edges (incoming roads for an intersection). The intersection by default is spawned at (0,0). The square brackets describe the shape coordinates if needed. The last entry (laned4) describes the number of lanes for that particular edge. By default edges is two laned but they can be 4 or 6 lanes also.  
 
-We take this file and input it our modified SUMO NETGENERATE application which is given [here](https://github.com/julinas/sumo-mirror). Instructions to build from source on windows are given [here](https://sumo.dlr.de/wiki/Installing/Windows_Build). After building from source, we are able to use the following command to generate the road network file :  
+We take this file and input it into our modified SUMO NETGENERATE application which is given [here](https://github.com/julinas/sumo-mirror). Instructions to build SUMO from source on windows are given [here](https://sumo.dlr.de/wiki/Installing/Windows_Build). After building from source, we are able to use the following command to generate the road network file :  
 ```
 netgenerate --town-sim --town-sim.file=[output of IntGen] --output-file=[output road network file].net.xml
 
