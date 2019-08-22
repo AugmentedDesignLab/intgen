@@ -1,0 +1,11 @@
+{"incoming_roads": 3,
+  "spawn_pointx": 0,
+  "spawn_pointy": 0,
+  "default_length_all_roads": 10,
+  "turn_lanes": 0,
+  "crossings": false,
+  "traffic_control": "stop_signs",
+  "sidewalks" : true,
+  "road1": {"road_number": "1", "lanes": 2, "sidewalks": false, "road_start_point": [0, 0], "road_end_point": [10.0, 0.0]},
+  "road2": {"road_number": "2", "lanes": 2, "sidewalks": false, "road_start_point": [0, 0], "road_end_point": [8.141809705265619, 5.806111842123142]},
+  "road3": {"road_number": "3", "lanes": 2, "sidewalks": false, "road_start_point": [0, 0], "road_end_point": [3.2578130553514804, 9.454451549211168]}}
