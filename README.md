@@ -1,4 +1,6 @@
-# Generator of a road intersection specification file
+# IntGen - A generator of a road intersection specification file. 
+
+
 
 ## Installation
 
@@ -14,7 +16,7 @@ This project includes a number of helpers in the `Makefile` to streamline common
 
 ### Environment Setup
 
-The following demonstrates setting up and working with a development environment:
+The following demonstrates setting up and working with a development environment (make sure that virtualenv is installed before starting. The pip command is given [here](https://pypi.org/project/virtualenv/)):
 
 ```
 ### create a virtualenv for development
